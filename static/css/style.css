@@ -1,0 +1,119 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto+Mono&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #333;
+  height: 100vh;
+}
+
+.clock-grid{
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  padding: 1rem;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.container h2{
+  color: white;
+  font-family: 'Roboto Mono', monospace;
+  margin-bottom: 1rem;
+}
+
+.container .time {
+  color: white;
+  margin-top: 1rem;
+  font-size: 3rem;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.container .date {
+  color: lightgray;
+  font-family: 'Roboto Mono', monospace;
+  text-align: center;
+  font-size: 1rem;
+}
+
+.container .date #day {
+  color: gainsboro;
+  margin: 1rem 0rem;
+}
+
+.container .date #month {
+  color: lightgray;
+  margin-left: 0.2rem;
+}
+
+.container .date #date {
+  color: lightgray;
+  margin-left: 0.5rem;
+  font-size: 1.1rem;
+}
+
+
+.container .clock-box {
+  background: rgba(255, 255, 255, 0.6);
+  width: 280px;
+  height: 280px;
+  position: relative;
+  border-radius: 50%;
+}
+
+.container .clock-box .hour {
+  z-index: 3;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform-origin: bottom center;
+  transform: translate(-50%, -100%) rotate(45deg);
+  width: 2px;
+  height: 80px;
+  background: #333;
+}
+
+.container .clock-box .mins {
+  z-index: 3;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform-origin: bottom center;
+  transform: translate(-50%, -100%) rotate(360deg);
+  width: 2px;
+  height: 120px;
+  background: #333;
+}
+
+.container .clock-box .secs {
+  z-index: 4;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform-origin: bottom center;
+  transform: translate(-50%, -100%) rotate();
+  width: 1px;
+  height: 120px;
+  background: white;
+}
+
+.container .clock-box .center {
+  z-index: 5;
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  background: #333;
+}

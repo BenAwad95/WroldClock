@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  {% load static %}
+  <link rel="stylesheet" href={% static 'css/style.css' %}>
+  <title>World Clock For Abdullah Awad</title>
+</head>
+
+<body>
+  <div class="clock-grid">
+   
+    <div class="container">
+      <h2>UTC</h2>
+      <div class="clock-box" offset='+00:00'>
+        <div class="hour"></div>
+        <div class="mins"></div>
+        <div class="secs"></div>
+        <div class="center"></div>
+      </div>
+      <div class="time">
+        <p><span></span>:<span></span></p>
+      </div>
+      <div class="date">
+        <p><span></span>,<span></span> <span></span></p>
+      </div>
+    </div>
+    {% block clocks %}
+   {% endblock clocks %}
+  </div>
+  <script src="{% static 'js/moment.js' %}"></script>
+  <script src="{% static 'js/main.js' %}"></script>
+</body>
+
+</html>

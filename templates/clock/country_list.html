@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% block clocks %}  
+  {% for clock in clocks %}
+      <div class="container">
+        <h2>{{clock.name|title}}</h2>
+        <div class="clock-box" offset={{clock.offset_string}}>
+          <div class="hour"></div>
+          <div class="mins"></div>
+          <div class="secs"></div>
+          <div class="center"></div>
+        </div>
+        <div class="time">
+          <p><span></span>:<span></span></p>
+        </div>
+        <div class="date">
+          <p><span></span>,<span></span> <span></span></p>
+        </div>
+      </div>
+  {% endfor %}
+{% endblock clocks %}
